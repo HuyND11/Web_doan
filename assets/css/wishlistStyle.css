@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Public+Sans:wght@200;400;500;700;800;900&family=Righteous&display=swap');
+:root{
+    --main-color-wishlish: #A3A1A3;
+    --fs-enjoy-title: 260px;
+    --img-size-wpt: calc(100vw/3.5);
+    --padding-post-thumbnail: 30px;
+    --fs-post-title: 20px;
+    --fs-header-text: 50px;
+    --height-header-wishlist: 80px;
+    --width-btn-nav: 260px;
+    --font-size-btn-text: 20px;
+    --height-btn-nav: 55px;
+    --transform-thumbnail-img: scale(1.12);
+
+}
+
+
+#header__wishlist{
+    height: var(--height-header-wishlist);
+    background-color: var(--main-color-wishlish);
+    border-bottom: 1px solid burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header__wishlist .between__text__top{
+    text-align: center;
+}
+#header__wishlist .between__text__top, #header__wishlist .between__text__bottom{
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: var(--fs-header-text);
+    font-weight: 500;
+}
+#header__wishlist .between__text__bottom{
+    transform: rotate(180deg);
+}
+#uyen__wishlist{
+    background-color: var(--main-color-wishlish);
+}
+
+#uyen__wishlist .intro__title
+{
+    font-family: 'Righteous', cursive;
+    font-size: var(--fs-enjoy-title);
+    text-transform: uppercase;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+            -225deg,
+            #0f99a4 0%,
+            darkslategray 29%,
+            #9CD08E 67%,
+            #F9A04E 100%
+    );
+    background-size: auto auto;
+    background-size: 200% auto;
+    color: #E2D9CE;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+}
+
+#uyen__wishlist .button__nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#uyen__wishlist .btn__go__homepage{
+    margin: auto;
+    background-color: black;
+}
+
+#uyen__wishlist .btn__go__homepage a{
+    color: white;
+}
+#uyen__wishlist .btn__go__news__post a{
+    color: black;
+}
+#uyen__wishlist .btn__go__news__post a, #uyen__wishlist .btn__go__homepage a{
+    margin: auto;
+
+}
+#uyen__wishlist .btn__go__news__post{
+    background-color: #E2D9CE;
+    grid-column: 2;
+    align-items: flex-end;
+
+}
+#uyen__wishlist .btn__go__new_posts_wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+#uyen__wishlist .btn__go__homepage,
+#uyen__wishlist .btn__go__news__post{
+    width: var(--width-btn-nav);
+    height: var(--height-btn-nav);
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'BioRhyme', serif;
+    font-size: var(--font-size-btn-text);
+    position: relative;
+    transition: 1s;
+
+}
+#uyen__wishlist .wishlist__post__wrapper{
+    overflow: hidden;
+    transition: 0.5s;
+}
+#uyen__wishlist .wishlist__post{
+    width: calc((var(--img-size-wpt) + 60px)*5);
+    display: flex;
+    gap: 65px;
+    padding: 65px 0;
+    animation: scroll 40s linear infinite;
+}
+#uyen__wishlist .wishlist__post:hover{
+    animation-play-state: paused;
+}
+#uyen__wishlist .wishlist__post_thumbnail img{
+    width: var(--img-size-wpt);
+    height: var(--img-size-wpt);
+    object-fit: cover;
+    margin: var(--padding-post-thumbnail);
+
+}
+#uyen__wishlist .wishlist__post_thumbnail:hover img{
+    transform: scale(1.12);
+    box-shadow: 0 0 10px 5px #E2D9CE;
+    transition: 1s;
+}
+#uyen__wishlist .wishlist__post_thumbnail {
+    width: calc(var(--img-size-wpt) + 60px);
+    background-color: #E2D9CE;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+#uyen__wishlist .post__title{
+    padding-bottom: var(--padding-post-thumbnail);
+    color: black;
+    font-size: var(--fs-post-title);
+    font-family: 'BioRhyme', serif;
+
+}
+#uyen__wishlist .icon__liked{
+    position: absolute;
+    right: -5%;
+    bottom: -5%;
+    font-size: calc(var(--img-size-wpt)/8.5);
+    color: #0f99a4;
+}
+
+#uyen__wishlist .most__liked{
+    width: 100%;
+    height: 750px;
+    background-color: #E1DED1;
+}
+
+#uyen__wishlist .most__liked__wrapper{
+    width: 90%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+}
+#uyen__wishlist .liked__amount{
+    display: flex;
+    align-items: center;
+}
+#uyen__wishlist .most__liked_image img{
+    width: 70%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 180px;
+    min-height: 300px;
+    align-items: center;
+    margin: auto;
+}
+#uyen__wishlist .text__liked__style{
+    font-size: 80px;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+}
+#uyen__wishlist .most__liked_image{
+    display: flex;
+}
+
+#uyen__wishlist .first__line{
+    display: flex;
+}
+
+/*#uyen__wishlist .middle__elementor{*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    background-color: #192c35;*/
+/*    border-radius: 50%;*/
+
+/*}*/
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc((var(--img-size-wpt) + 60px)*(-2.5)))
+    }
+}
+@media screen and (max-width: 1410px){
+    :root{
+        --fs-enjoy-title: 190px;
+    }
+}
+@media screen and (max-width: 1024px){
+    :root{
+        --fs-enjoy-title: 170px;
+        --padding-post-thumbnail: 17px;
+        --width-btn-nav: 200px;
+    }
+
+}
+@media screen and (max-width: 884px){
+    :root{
+        --fs-enjoy-title: 140px;
+        --fs-post-title: 15px;
+        --fs-header-text: 45px;
+        --width-btn-nav: 150px;
+        --font-size-btn-text: 16px;
+        --height-btn-nav: 40px;
+        --transform-thumbnail-img: scale(1.14);
+    }
+
+}
+
+@media screen and (max-width: 428px){
+    :root{
+        --fs-enjoy-title: 70px;
+        --fs-post-title: 12px;
+        --fs-header-text: 40px;
+        --height-header-wishlist: 70px;
+        --width-btn-nav: 120px;
+        --font-size-btn-text: 13px;
+        --height-btn-nav: 32px;
+        --img-size-wpt: calc(700px/3.5);
+        /*--transform-thumbnail-img: scale(1.17);*/
+
+
+    }
+    #uyen__wishlist .intro__title{
+        padding: 10px 0;
+    }
+}
